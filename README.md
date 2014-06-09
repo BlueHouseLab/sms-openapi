@@ -1,2 +1,2 @@
-BlueHouseLab Korean SMS OpenAPI
-===============================
+BlueHouseLab SMS OpenAPI (for S.Korea)
+======================================

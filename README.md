@@ -1,2 +1,2 @@
-smsapi
-======
+BlueHouseLab Korean SMS OpenAPI
+===============================

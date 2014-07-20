@@ -511,32 +511,32 @@ rejected        ["0101112222",]               List       필수
 Sample Code
 ===========
 
-청기와랩의 SMS OpenAPI 샘플 코드들은 GitHub (https://github.com/bluehouselab/smsapi) 에서 다운 받으실 수 있습니다.
+청기와랩의 SMS OpenAPI 샘플 코드들은 GitHub (https://github.com/bluehouselab/sms-openapi) 에서 다운 받으실 수 있습니다.
 
 Git를 이용한 샘플코드 프로젝트 체크아웃:
 
 .. code-block:: bash
 
-    $ git clone https://github.com/BlueHouseLab/smsapi.git
+    $ git clone https://github.com/BlueHouseLab/sms-openapi.git
 
 또는 샘플코드 Zip 아카이브 파일 다운 받기:
 
 .. code-block:: bash
 
-    $ wget https://github.com/BlueHouseLab/smsapi/archive/master.zip
+    $ wget https://github.com/BlueHouseLab/sms-openapi/archive/master.zip
 
 cURL
 ----
 
 `curl <http://curl.haxx.se>`_ 은 많은 Unix 기반 Platform에 기본으로 탑재된 command line http client 입니다. 각종 Linux 배포판, BSD 배포판 및 Mac OS X에서 테스트 용도로 활용 가능 합니다.
 
-`env.sh <https://github.com/BlueHouseLab/smsapi/blob/master/curl/env.sh>`_ - 발급 받은 appid, apikey 및 수발신 번호를 설정해 주세요.
+`env.sh <https://github.com/BlueHouseLab/sms-openapi/blob/master/curl/env.sh>`_ - 발급 받은 appid, apikey 및 수발신 번호를 설정해 주세요.
 
 .. literalinclude:: ../curl/env.sh
    :language: bash
    :lines: 1-4
 
-`sendsms.sh <https://github.com/BlueHouseLab/smsapi/blob/master/curl/sendsms.sh>`_ - sms 발송
+`sendsms.sh <https://github.com/BlueHouseLab/sms-openapi/blob/master/curl/sendsms.sh>`_ - sms 발송
 
 .. literalinclude:: ../curl/sendsms.sh
    :language: bash
@@ -552,7 +552,7 @@ cURL
 
     {"filtered": [], "reserved": null, "sent": [["01000000000", "201407040215163682530"]]}
 
-`result.sh <https://github.com/BlueHouseLab/smsapi/blob/master/curl/result.sh>`_ - 발송 확인 예제, sendsms.sh 의 결과로 받은 발송ID를 인자로 주어야 함
+`result.sh <https://github.com/BlueHouseLab/sms-openapi/blob/master/curl/result.sh>`_ - 발송 확인 예제, sendsms.sh 의 결과로 받은 발송ID를 인자로 주어야 함
 
 .. literalinclude:: ../curl/result.sh
    :language: bash
@@ -574,14 +574,14 @@ Python
 Python 예제는 Standard Library인 `httplib <https://docs.python.org/2/library/httplib.html>`_ 모듈을 이용하여 작성 되었습니다. `httplib <https://docs.python.org/2/library/httplib.html>`_ 모듈은 SSL Certificate Verification 과정이 생략된 HTTP Client 모듈 이므로 개발 참고용으로만 사용하세요. 실제 개발에는 보안을 위해 `Requests <http://docs.python-requests.org/en/latest/>`_ 모듈을 추천 합니다.
 
 
-`conf.py <https://github.com/BlueHouseLab/smsapi/blob/master/python/conf.py>`_ - 발급 받은 appid, apikey 및 수발신 번호를 설정해 주세요.
+`conf.py <https://github.com/BlueHouseLab/sms-openapi/blob/master/python/conf.py>`_ - 발급 받은 appid, apikey 및 수발신 번호를 설정해 주세요.
 
 .. literalinclude:: ../python/conf.py
    :language: python
    :emphasize-lines: 3-
    :lines: 1-16
 
-`sendsms.py <https://github.com/BlueHouseLab/smsapi/blob/master/python/sendsms.py>`_ - sms 발송
+`sendsms.py <https://github.com/BlueHouseLab/sms-openapi/blob/master/python/sendsms.py>`_ - sms 발송
 
 .. literalinclude:: ../python/sendsms.py
    :language: python
@@ -596,7 +596,7 @@ Python 예제는 Standard Library인 `httplib <https://docs.python.org/2/library
     {"filtered": [], "reserved": null, "sent": [["01000000000", "201407040043284939320"]]}
 
 
-`result.py <https://github.com/BlueHouseLab/smsapi/blob/master/python/result.py>`_ - 발송 확인 예제, sendsms.py 의 결과로 받은 발송ID를 인자로 주어야 함
+`result.py <https://github.com/BlueHouseLab/sms-openapi/blob/master/python/result.py>`_ - 발송 확인 예제, sendsms.py 의 결과로 받은 발송ID를 인자로 주어야 함
 
 .. literalinclude:: ../python/result.py
    :language: python
@@ -616,7 +616,7 @@ Python (Requests)
 
 `Requests <http://docs.python-requests.org/en/latest/>`_ 모듈을 이용한 더 안전하고 Human을 위한 예제 구현 입니다.
 
-`sendsms.py <https://github.com/BlueHouseLab/smsapi/blob/master/python/sendsms.py>`_ - sms 발송
+`sendsms.py <https://github.com/BlueHouseLab/sms-openapi/blob/master/python/sendsms.py>`_ - sms 발송
 
 .. literalinclude:: ../python-requests/sendsms.py
    :language: python
@@ -630,7 +630,7 @@ Python (Requests)
     {"filtered": [], "reserved": null, "sent": [["01000000000", "201407040043284939320"]]}
 
 
-`result.py <https://github.com/BlueHouseLab/smsapi/blob/master/python/result.py>`_ - 발송 확인 예제, sendsms.py 의 결과로 받은 발송ID를 인자로 주어야 함
+`result.py <https://github.com/BlueHouseLab/sms-openapi/blob/master/python/result.py>`_ - 발송 확인 예제, sendsms.py 의 결과로 받은 발송ID를 인자로 주어야 함
 
 .. literalinclude:: ../python-requests/result.py
    :language: python
@@ -647,7 +647,7 @@ Python (Requests)
 Ruby
 ----
 
-`sendsms.rb <https://github.com/BlueHouseLab/smsapi/blob/master/ruby/sendsms.rb>`_ - sms 발송
+`sendsms.rb <https://github.com/BlueHouseLab/sms-openapi/blob/master/ruby/sendsms.rb>`_ - sms 발송
 
 .. literalinclude:: ../ruby/sendsms.rb
    :language: ruby
@@ -661,7 +661,7 @@ Ruby
     200
     {"filtered": [], "reserved": null, "sent": [["01000000000", "201407201409478863550"]]]}
 
-`result.rb <https://github.com/BlueHouseLab/smsapi/blob/master/ruby/result.rb>`_ - 발송 확인 예제, sendsms.rb 의 결과로 받은 발송ID를 인자로 주어야 함
+`result.rb <https://github.com/BlueHouseLab/sms-openapi/blob/master/ruby/result.rb>`_ - 발송 확인 예제, sendsms.rb 의 결과로 받은 발송ID를 인자로 주어야 함
 
 .. literalinclude:: ../ruby/result.rb
    :language: ruby

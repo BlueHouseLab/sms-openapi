@@ -1,5 +1,5 @@
-BlueHouseLab SMS OpenAPI v1.0
-==============================
+청기와랩 SMS OpenAPI v1.0
+==========================
 
 This is official reference sample project for BlueHouseLab S.Korean SMS OpenAPI.
 For more details, please visit to https://www.bluehouselab.com/sms/

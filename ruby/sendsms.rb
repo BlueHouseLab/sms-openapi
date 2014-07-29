@@ -5,7 +5,7 @@ require 'uri'
 require 'json'
 require './conf.rb'
 
-uri = URI.parse('https://api.bluehouselab.com/smscenter/v1.0b/sendsms')
+uri = URI.parse('https://api.bluehouselab.com/smscenter/v1.0/sendsms')
 
 http = Net::HTTP.new(uri.host, uri.port)
 http.use_ssl = true

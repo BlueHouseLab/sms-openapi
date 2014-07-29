@@ -4,7 +4,7 @@ import requests
 import json
 from conf import appid, apikey, sender, receivers, content
 
-url = 'https://api.bluehouselab.com/smscenter/v1.0b/sendsms'
+url = 'https://api.bluehouselab.com/smscenter/v1.0/sendsms'
 params = {
     'sender'     : sender,
     'receivers'  : receivers,

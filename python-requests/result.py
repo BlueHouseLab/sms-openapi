@@ -11,7 +11,7 @@ if len(sys.argv) == 1:
 
 deliveryid = sys.argv[1]
 
-url = 'https://api.bluehouselab.com/smscenter/v1.0b/result/'+deliveryid
+url = 'https://api.bluehouselab.com/smscenter/v1.0/result/'+deliveryid
 params = {
     'sender'     : sender,
     'receivers'  : receivers,

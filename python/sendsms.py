@@ -6,7 +6,7 @@ from conf import address, sender, receivers, headers, content
 
 c = httplib.HTTPSConnection(address)
 
-path = "/smscenter/v1.0b/sendsms"
+path = "/smscenter/v1.0/sendsms"
 value = {
     'sender'     : sender,
     'receivers'  : receivers,

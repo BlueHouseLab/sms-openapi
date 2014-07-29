@@ -13,7 +13,7 @@ if len(sys.argv) == 1:
     sys.exit(1)
 
 deliveryid = sys.argv[1]
-path = "/smscenter/v1.0b/cancel/"+deliveryid
+path = "/smscenter/v1.0/cancel/"+deliveryid
 
 c.request("DELETE", path, '', headers)
 r = c.getresponse()

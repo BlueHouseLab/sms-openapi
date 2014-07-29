@@ -8,7 +8,7 @@ from conf import address, sender, receivers, headers, content
 
 c = httplib.HTTPSConnection(address)
 
-path = "/smscenter/v1.0b/rejectednumbers"
+path = "/smscenter/v1.0/rejectednumbers"
 c.request("POST", path, '', headers)
 r = c.getresponse()
 

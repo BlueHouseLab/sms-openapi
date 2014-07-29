@@ -13,7 +13,7 @@ if len(sys.argv) == 1:
     sys.exit(1)
 
 deliveryid = sys.argv[1]
-path = "/smscenter/v1.0b/result/"+deliveryid
+path = "/smscenter/v1.0/result/"+deliveryid
 
 c.request("GET", path, '', headers)
 r = c.getresponse()

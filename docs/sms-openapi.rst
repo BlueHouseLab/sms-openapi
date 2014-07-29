@@ -129,7 +129,7 @@ HTTP Request Header:
 HTTP Header   Value
 ============  ================================
 Method        Post
-URI Path      /smscenter/v1.0b/sendsms
+URI Path      /smscenter/v1.0/sendsms
 Content-Type  application/json; charset=utf-8
 ============  ================================
 
@@ -214,7 +214,7 @@ HTTP Request Header:
 HTTP Header   Value
 ============  ================================
 Method        Post
-URI Path      /smscenter/v1.0b/sendlms
+URI Path      /smscenter/v1.0/sendlms
 Content-Type  application/json; charset=utf-8
 ============  ================================
 
@@ -257,7 +257,7 @@ HTTP Request Header:
 HTTP Header   Value
 ============  ================================
 Method        Get
-URI Path      /smscenter/v1.0b/sendresult/발송ID
+URI Path      /smscenter/v1.0/sendresult/발송ID
 ============  ================================
 
 .. note::
@@ -271,7 +271,7 @@ URI Path      /smscenter/v1.0b/sendresult/발송ID
 
 Example::
 
-  Get /smscenter/v1.0b/sendresult/10001 HTTP/1.1
+  Get /smscenter/v1.0/sendresult/10001 HTTP/1.1
 
 HTTP Response Header:
 
@@ -326,7 +326,7 @@ HTTP Request Header:
 HTTP Header   Value
 ============  ========================================
 Method        Get
-URI Path      /smscenter/v1.0b/sendresult/group/그룹ID
+URI Path      /smscenter/v1.0/sendresult/group/그룹ID
 ============  ========================================
 
 .. note::
@@ -335,7 +335,7 @@ URI Path      /smscenter/v1.0b/sendresult/group/그룹ID
 
 Example::
 
-  Get /smscenter/v1.0b/sendresult/group/10001 HTTP/1.1
+  Get /smscenter/v1.0/sendresult/group/10001 HTTP/1.1
 
 HTTP Response Header:
 
@@ -374,7 +374,7 @@ HTTP Request Header:
 HTTP Header   Value
 ============  ================================
 Method        Delete
-URI Path      /smscenter/v1.0b/cancel/예약ID
+URI Path      /smscenter/v1.0/cancel/예약ID
 ============  ================================
 
 .. note::
@@ -384,7 +384,7 @@ URI Path      /smscenter/v1.0b/cancel/예약ID
 
 Example::
 
-  Delete /smscenter/v1.0b/cancel/187c4b7affa011e3bf47c42c032b413b
+  Delete /smscenter/v1.0/cancel/187c4b7affa011e3bf47c42c032b413b
 
 .. note::
 
@@ -409,12 +409,12 @@ HTTP Request Header:
 HTTP Header   Value
 ============  ================================
 Method        Get
-URI Path      /smscenter/v1.0b/rejectednumbers
+URI Path      /smscenter/v1.0/rejectednumbers
 ============  ================================
 
 Example::
 
-  Get /smscenter/v1.0b/rejectednumbers HTTP/1.1
+  Get /smscenter/v1.0/rejectednumbers HTTP/1.1
 
 HTTP Response Header:
 

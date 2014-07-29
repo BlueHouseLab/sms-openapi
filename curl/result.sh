@@ -8,4 +8,4 @@ fi
 
 DELIVERYID=$1
 
-curl -i -u $APPID:$APIKEY $HOST/smscenter/v1.0b/result/$DELIVERYID 
+curl -i -u $APPID:$APIKEY $HOST/smscenter/v1.0/result/$DELIVERYID 

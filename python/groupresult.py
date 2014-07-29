@@ -13,7 +13,7 @@ if len(sys.argv) == 1:
     sys.exit(1)
 
 groupid = sys.argv[1]
-path = "/smscenter/v1.0b/result/group/"+groupid
+path = "/smscenter/v1.0/result/group/"+groupid
 
 c.request("GET", path, '', headers)
 r = c.getresponse()

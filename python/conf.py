@@ -3,8 +3,6 @@ import base64
 
 appid = 'example'
 apikey = 'c5dd7e7dkjp27377l903c42c032b413b'
-appid = 'test01'
-apikey = '213d7e220f5c11e487a7040113e09101'
 address = 'api.bluehouselab.com'
 
 sender = '01000000000'        # FIXME - MUST BE CHANGED AS REAL PHONE NUMBER

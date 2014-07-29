@@ -114,6 +114,7 @@ Status Code    Description
 403            Forbidden, 접근 불가, HTTPS를 통한 연결이 아니거나 인증 실패
 404            Not found, delivery id 등의 resource가 존재하지 않는 경우
 406            Not Acceptable, JSON 파싱 실패 등
+410            Gone, API deprecated
 412            Precondition Failed, 입력 값에 문제 있음
 500            Internal Server Error, 내부 서버 오류
 503            Service Unavailable, 내부 서버 오류

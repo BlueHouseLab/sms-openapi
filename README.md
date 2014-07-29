@@ -7,7 +7,7 @@ For more details, please visit to https://www.bluehouselab.com/sms/
 Korean API document is located at http://bluehouselab-sms-openapi.readthedocs.org/ko/latest/
 
 청기와랩 SMS 오픈API의 공식 예제를 제공하는 프로젝트 입니다.
-API 문서는 http://bluehouselab-sms-openapi.readthedocs.org/ko/latest/ 를 참조 하세요.
+API 문서는 http://bluehouselab-sms-openapi.readthedocs.org/ 를 참조 하세요.
 
 
 Examples

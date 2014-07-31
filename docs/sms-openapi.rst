@@ -562,12 +562,12 @@ cURL
 
 .. code-block:: bash
 
-	$ ./result.sh 201407040215163682530
-	HTTP/1.0 200 OK
-	Date: Thu, 03 Jul 2014 17:20:55 GMT
-	Content-Type: application/json; charset=utf-8
+    $ ./result.sh 201407040215163682530
+    HTTP/1.0 200 OK
+    Date: Thu, 03 Jul 2014 17:20:55 GMT
+    Content-Type: application/json; charset=utf-8
 
-	{"status": "0", "destination": "01000000000", "sent_time": "2014-07-03T17:15:20Z"}
+    {"status": "0", "destination": "01000000000", "sent_time": "2014-07-03T17:15:20Z"}
 
 Python
 ------
@@ -586,7 +586,7 @@ Python 예제는 Standard Library인 `httplib <https://docs.python.org/2/library
 
 .. literalinclude:: ../python/sendsms.py
    :language: python
-   :emphasize-lines: 5-17
+   :emphasize-lines: 6-18
 
 실행 예 
 
@@ -681,19 +681,64 @@ Ruby
 PHP
 ---
 
-.. code-block:: xml+php
+`sendsms.php <https://github.com/BlueHouseLab/sms-openapi/blob/master/php/sendsms.php>`_ - sms 발송
+
+.. literalinclude:: ../php/sendsms.php
+   :language: xml+php
+
+실행 예 
+
+.. code-block:: bash
+
+    $ php sendsms.php
+    200
+    Array
+    (
+        [filtered] => Array
+            (
+            )
+        [reserved] => 
+        [sent] => Array
+            (
+                [0] => Array
+                    (
+                        [0] => 01000000000
+                        [1] => 201408010307369291320
+                    )
+            )
+    )
+
+
+`result.php <https://github.com/BlueHouseLab/sms-openapi/blob/master/php/result.php>`_ - 발송 확인 예제, sendsms.php 의 결과로 받은 발송ID를 인자로 주어야 함
+
+.. literalinclude:: ../php/result.php
+   :language: xml+php
+
+실행 예 
+
+.. code-block:: bash
+
+    $ php result.php 201408010307369291320
+    200
+    Array
+    (
+        [status] => 0
+        [destination] => 01000000000
+        [sent_time] => 2014-07-31T18:07:38Z
+    )
+
 
 Javascript (Node.js)
 --------------------
 
 .. code-block:: javascript
 
-Java (Android)
+Java
 --------------
 
 .. code-block:: java
 
-Obj-C (iOS)
+C (POSIX)
 -----------
 
 .. code-block:: objective-c++

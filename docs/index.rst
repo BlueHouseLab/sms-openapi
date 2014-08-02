@@ -6,7 +6,7 @@
    :synopsis: 청기와랩의 SMS Open API 참조 문서
 .. moduleauthor:: BlueHouseLab DevTeam <devel@bluehouselab.com>
 
-청기와랩이 제공하는 SMS Open API
+청기와랩이 제공하는 SMS Open API 서비스. https://bluehouselab.com/sms/
 
 서비스 개요
 ===========
@@ -760,10 +760,45 @@ Javascript (Node.js)
       destination: '01000000000',
       sent_time: '2014-08-01T18:14:35Z' }
 
-Java
+Java (Android)
 --------------
 
-.. code-block:: java
+Java 예제는 Apache 프로젝트의 `Http Component <http://hc.apache.org>`_ 를 사용하여 작성 하였 습니다. Mac, Linux, Windows 등의 일반적인 Java 개발 환경 뿐만 아니라, Apache Http Component가 기본 탑재 되어 있는 Android (API level 1) 에도 적용 가능한 샘플 입니다.
+
+빌드 (Linux/Mac/Windows) - GNU make 명령을 이용하여 Java 코드들을 컴파일 합니다. `Makefile <https://github.com/BlueHouseLab/sms-openapi/blob/master/java/Makefile>`_ 을 참고 하세요.
+
+.. code-block:: bash
+
+    $ make
+
+`Sendsms.java <https://github.com/BlueHouseLab/sms-openapi/blob/master/java/SendSMS.java>`_ - sms 발송
+
+.. literalinclude:: ../java/SendSMS.java
+   :language: java
+   :lines: 17-
+
+실행 예 
+
+.. code-block:: bash
+
+    $ ./sendsms # bash shell script to execute java with require params
+    200
+    {"filtered": [], "reserved": null, "sent": [["01000000000", "201408030412368846800"]]}
+
+
+`Result.java <https://github.com/BlueHouseLab/sms-openapi/blob/master/java/Result.java>`_ - 발송 확인 예제, SendSMS.java 의 결과로 받은 발송ID를 인자로 주어야 함
+
+.. literalinclude:: ../java/Result.java
+   :language: java
+   :lines: 15-
+
+실행 예 
+
+.. code-block:: bash
+
+    $ ./result 201408030412368846800 # bash shell script to execute java
+    200
+    {"status": 0, "destination": "01000000000", "sent_time": "2014-08-02T19:12:35Z"}
 
 C (POSIX)
 -----------

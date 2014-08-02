@@ -1,0 +1,5 @@
+#!/bin/bash
+CLASSNAME=Result
+test ! -f $CLASSNAME.class && make
+for JAR in $(find . -name '*.jar'); do CP=$CP:$JAR; done
+exec java -cp .$CP $CLASSNAME $@

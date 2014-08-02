@@ -24,7 +24,10 @@ var req = https.request(options, function(res) {
     body += d;
   });
   res.on('end', function(d) {
-    console.log(JSON.parse(body));
+  	if(res.statusCode==200)
+		console.log(JSON.parse(body));
+	else
+		console.log(body);
   });
 });
 req.end();

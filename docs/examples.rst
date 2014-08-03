@@ -312,6 +312,7 @@ C 예제는 `libcurl <http://curl.haxx.se>`_ 라이브러리를 HTTP Client 로 
 
 .. literalinclude:: ../c-curl/sendsms.c
    :language: c
+   :lines: 12-
 
 실행 예 
 
@@ -326,6 +327,7 @@ C 예제는 `libcurl <http://curl.haxx.se>`_ 라이브러리를 HTTP Client 로 
 
 .. literalinclude:: ../c-curl/result.c
    :language: c
+   :lines: 12-
 
 실행 예 
 

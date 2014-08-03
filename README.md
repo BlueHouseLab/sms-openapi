@@ -18,4 +18,8 @@ Examples
 * ruby
 * php
 * node.js
+* java (Android)
+* C (libcurl)
+* C++ (Qt5)
+* C# (Mono/Xamarin)
 * callback-api : Simple webserver to test Callback API

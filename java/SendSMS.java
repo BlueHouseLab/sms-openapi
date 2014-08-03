@@ -28,7 +28,8 @@ public final class SendSMS {
             HttpPost httpPost = new HttpPost(url);
             httpPost.setHeader("Content-type", "application/json; charset=utf-8");
             String json = "{\"sender\":\""+Config.sender+"\",\"receivers\":[\""+Config.receiver+"\"],\"content\":\""+Config.content+"\"}";
-            StringEntity se = new StringEntity(json);
+
+            StringEntity se = new StringEntity(json, "UTF-8");
             httpPost.setEntity(se);
 
             HttpResponse httpResponse = client.execute(httpPost);

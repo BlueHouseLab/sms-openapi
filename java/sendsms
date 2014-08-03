@@ -2,4 +2,7 @@
 CLASSNAME=SendSMS
 test ! -f $CLASSNAME.class && make
 for JAR in $(find . -name '*.jar'); do CP=$CP:$JAR; done
+
+export LC_TYPE=ko_KR.UTF-8
+export _JAVA_OPTIONS=-Dfile.encoding=UTF-8
 exec java -cp .$CP $CLASSNAME $@

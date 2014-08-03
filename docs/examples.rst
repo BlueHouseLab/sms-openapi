@@ -293,8 +293,55 @@ Java 예제는 Apache 프로젝트의 `Http Component <http://hc.apache.org>`_ �
     200
     {"status": 0, "destination": "01000000000", "sent_time": "2014-08-02T19:12:35Z"}
 
-C (POSIX)
+C (libcurl)
+-----------
+
+C 예제는 `libcurl <http://curl.haxx.se>`_ 라이브러리를 HTTP Client 로 사용하였습니다. libcurl은 Linux/BSD/Win32 환경에서 가장 많이 사용되는 통신 모듈 중 하나로 이식성이 우수 하며 여러 프로젝트에서 사용되어 안정성 및 그 우수성을 인정 받고 있는 오픈 소스 라이브러리 입니다. 
+
+빌드 (Linux/Mac/Windows) - GNU make 및 pkg-config 명령을 이용하여 빌드 합니다. Windows 환경에서는 `cygwin <http://www.cygwin.com>`_ 또는 `msys <http://www.mingw.org/wiki/msys>`_ 환경에서 쉽게 빌드 하실 수 있습니다.
+
+.. code-block:: bash
+
+    $ make
+    cc -Wall -O2 -o sendsms.o -c sendsms.c `pkg-config --cflags libcurl`
+    cc -o sendsms sendsms.o `pkg-config --libs libcurl`
+    cc -Wall -O2 -o result.o -c result.c `pkg-config --cflags libcurl`
+    cc -o result result.o `pkg-config --libs libcurl`
+
+`sendsms.c <https://github.com/BlueHouseLab/sms-openapi/blob/master/c-curl/sendsms.c>`_ - sms 발송
+
+.. literalinclude:: ../c-curl/sendsms.c
+   :language: c
+
+실행 예 
+
+.. code-block:: bash
+
+    $ ./sendsms
+    200
+    {"filtered": [], "reserved": null, "sent": [["01000000000", "201408030412368846800"]]}
+
+
+`result.c <https://github.com/BlueHouseLab/sms-openapi/blob/master/c-curl/result.c>`_ - 발송 확인 예제, sendsms.c 의 결과로 받은 발송ID를 인자로 주어야 함
+
+.. literalinclude:: ../c-curl/result.c
+   :language: c
+
+실행 예 
+
+.. code-block:: bash
+
+    $ ./result 201408030412368846800
+    200
+    {"status": 0, "destination": "01000000000", "sent_time": "2014-08-02T19:12:35Z"}
+
+
+C++ (Qt5)
+-----------
+
+.. code-block:: c++
+
+Obj-C
 -----------
 
 .. code-block:: objective-c++
-

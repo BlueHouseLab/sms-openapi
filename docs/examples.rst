@@ -256,9 +256,9 @@ Javascript (Node.js)
 Java (Android)
 --------------
 
-Java 예제는 Apache 프로젝트의 `Http Component <http://hc.apache.org>`_ 를 사용하여 작성 하였 습니다. Mac, Linux, Windows 등의 일반적인 Java 개발 환경 뿐만 아니라, Apache Http Component가 기본 탑재 되어 있는 Android (API level 1) 에도 적용 가능한 샘플 입니다.
+Java 예제는 Apache 프로젝트의 `Http Component <http://hc.apache.org>`_ 를 사용하여 작성 하였 습니다. Mac, Linux, Win32 등의 일반적인 Java 개발 환경 뿐만 아니라, Apache Http Component가 기본 탑재 되어 있는 Android (API level 1) 에도 적용 가능한 샘플 입니다.
 
-빌드 (Linux/Mac/Windows) - GNU make 명령을 이용하여 Java 코드들을 컴파일 합니다. `Makefile <https://github.com/BlueHouseLab/sms-openapi/blob/master/java/Makefile>`_ 을 참고 하세요.
+빌드 (Linux/Mac/Win32) - GNU make 명령을 이용하여 Java 코드들을 컴파일 합니다. `Makefile <https://github.com/BlueHouseLab/sms-openapi/blob/master/java/Makefile>`_ 을 참고 하세요.
 
 .. code-block:: bash
 
@@ -298,7 +298,7 @@ C (libcurl)
 
 C 예제는 `libcurl <http://curl.haxx.se>`_ 라이브러리를 HTTP Client 로 사용하였습니다. libcurl은 Linux/BSD/Win32 환경에서 가장 많이 사용되는 통신 모듈 중 하나로 이식성이 우수 하며 여러 프로젝트에서 사용되어 안정성 및 그 우수성을 인정 받고 있는 오픈 소스 라이브러리 입니다. 
 
-빌드 (Linux/Mac/Windows) - GNU make 및 pkg-config 명령을 이용하여 빌드 합니다. Windows 환경에서는 `cygwin <http://www.cygwin.com>`_ 또는 `msys <http://www.mingw.org/wiki/msys>`_ 환경에서 쉽게 빌드 하실 수 있습니다.
+빌드 (Linux/Mac/Win32) - GNU make 및 pkg-config 명령을 이용하여 빌드 합니다. Win32 환경에서는 `cygwin <http://www.cygwin.com>`_ 또는 `msys <http://www.mingw.org/wiki/msys>`_ 환경에서 쉽게 빌드 하실 수 있습니다.
 
 .. code-block:: bash
 
@@ -341,7 +341,41 @@ C 예제는 `libcurl <http://curl.haxx.se>`_ 라이브러리를 HTTP Client 로 
 C++ (Qt5)
 -----------
 
-.. code-block:: c++
+C++ 예제는 `Qt5 <http://qt-project.org>`_ 를 HTTP Client 로 사용하였습니다. Qt 는 오랜 기간 동안 오픈소스 소프트웨어 발전에 기여한 훌륭한 GUI 프레임워크 입니다. LGPL라이센스로 Linux(X11/Wayland), Mac(X11/Cocoa), Win32, iOS, Android, SailFish OS 환경에서 모두 사용 가능합니다. 이 예제는 GUI를 사용하지 않고 Console 환경에서 SMS를 발송 할수 있도록 심플하게 작성 되었습니다.
+
+빌드 (Linux/Mac/Win32) - GNU make 및 Qt5의 qmake 명령을 이용하여 빌드 합니다.
+
+.. code-block:: bash
+
+    $ make
+
+`sendsms.cpp <https://github.com/BlueHouseLab/sms-openapi/blob/master/c++qt5/sendsms.cpp>`_ - sms 발송
+
+.. literalinclude:: ../c++qt5/sendsms.cpp
+   :language: c++
+   :lines: 47-63
+
+실행 예 
+
+.. code-block:: bash
+
+    $ ./sendsms
+    "{"filtered": [], "reserved": null, "sent": [["01000000000", "201408032346305478310"]]}" 
+
+
+`result.cpp <https://github.com/BlueHouseLab/sms-openapi/blob/master/c++qt5/result.cpp>`_ - 발송 확인 예제, sendsms.cpp 의 결과로 받은 발송ID를 인자로 주어야 함
+
+.. literalinclude:: ../c++qt5/result.cpp
+   :language: c++
+   :lines: 44-58
+
+실행 예 
+
+.. code-block:: bash
+
+    $ ./result 201408032346305478310
+    200 
+    "{"status": 0, "destination": "01000000000", "sent_time": "2014-08-03T14:46:29Z"}" 
 
 Obj-C
 -----------

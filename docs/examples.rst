@@ -394,7 +394,7 @@ C# 예제는 `System.Net.WebClient <http://msdn.microsoft.com/ko-kr/library/syst
    :language: c#
    :lines: 4-34
 
-실행 예 
+실행 예 (Mac OS X)
 
 .. code-block:: bash
 
@@ -408,7 +408,7 @@ C# 예제는 `System.Net.WebClient <http://msdn.microsoft.com/ko-kr/library/syst
    :language: c#
    :lines: 5-35
 
-실행 예 
+실행 예 (Mac OS X)
 
 .. code-block:: bash
 

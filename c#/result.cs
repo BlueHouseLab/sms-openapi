@@ -2,7 +2,7 @@ using System;
 using System.Net;
 using System.Text;
 
-class SendSMS
+class Result
 {
     static void Main(string[] args)
     {

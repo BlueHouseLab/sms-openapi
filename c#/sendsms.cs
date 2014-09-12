@@ -8,6 +8,7 @@ class SendSMS
         string url = "https://api.bluehouselab.com/smscenter/v1.0/sendsms";
         string appid = "example";
         string apikey = "c5dd7e7dkjp27377l903c42c032b413b";
+
         string json = @"{
             ""sender"": ""01000000000"",
             ""receivers"": [""01000000000""],
@@ -17,7 +18,17 @@ class SendSMS
         NetworkCredential creds = new NetworkCredential(appid, apikey);
         client.Credentials = creds;
         client.Headers[HttpRequestHeader.ContentType] = "application/json; charset=utf-8";
-        string response = client.UploadString(url, json);
-        Console.WriteLine(response);
+
+        try
+        {
+            string response = client.UploadString(url, json);
+            Console.WriteLine(response);
+        }
+        catch (WebException e)
+        {
+            HttpStatusCode status = ((HttpWebResponse)e.Response).StatusCode;
+            Console.WriteLine("{0}", (int)status);
+            Console.WriteLine("{0}", status.ToString());
+        }
     }
 }

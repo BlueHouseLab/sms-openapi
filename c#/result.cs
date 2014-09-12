@@ -19,7 +19,17 @@ class SendSMS
         WebClient client = new WebClient();
         NetworkCredential creds = new NetworkCredential(appid, apikey);
         client.Credentials = creds;
-        byte[] response = client.DownloadData(url);
-        Console.WriteLine(Encoding.UTF8.GetString(response));
+
+        try
+        {
+            byte[] response = client.DownloadData(url);
+            Console.WriteLine(Encoding.UTF8.GetString(response));
+        }
+        catch (WebException e)
+        {
+            HttpStatusCode status = ((HttpWebResponse)e.Response).StatusCode;
+            Console.WriteLine("{0}", (int)status);
+            Console.WriteLine("{0}", status.ToString());
+        }
     }
 }

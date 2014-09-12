@@ -377,7 +377,41 @@ C++ 예제는 `Qt5 <http://qt-project.org>`_ 를 HTTP Client 로 사용하였습
     200 
     "{"status": 0, "destination": "01000000000", "sent_time": "2014-08-03T14:46:29Z"}" 
 
-Obj-C
------------
+C# (Mono/.NET)
+---------------
 
-.. code-block:: objective-c++
+C# 예제는 `System.Net.WebClient <http://msdn.microsoft.com/ko-kr/library/system.net.webclient(v=vs.110).aspx>`_ 를 사용하여 간단하게 작성 되었습니다. 또한 오픈소스 .NET 프레임워크인 `Mono <http://www.mono-project.com>`_ 환경에서 작성 및 테스트 되었습니다. Mono를 통해 Windows는 물론 Linux, Mac OS X 환경에서도 테스트 가능 합니다.
+
+빌드 (Linux/Mac) - GNU make를 이용하여 빌드 합니다.
+
+.. code-block:: bash
+
+    $ make
+
+`sendsms.cs <https://github.com/BlueHouseLab/sms-openapi/blob/master/c%23/sendsms.cs>`_ - sms 발송
+
+.. literalinclude:: ../c#/sendsms.cs
+   :language: c#
+   :lines: 4-34
+
+실행 예 
+
+.. code-block:: bash
+
+    $ mono sendsms.exe 
+    {"filtered": [], "reserved": null, "sent": [["01000000000", "201409130128257158920"]]}
+
+
+`result.cs <https://github.com/BlueHouseLab/sms-openapi/blob/master/c%23/result.cs>`_ - 발송 확인 예제, sendsms.cs 의 결과로 받은 발송ID를 인자로 주어야 함
+
+.. literalinclude:: ../c#/result.cs
+   :language: c#
+   :lines: 5-35
+
+실행 예 
+
+.. code-block:: bash
+
+    $ mono result.exe 201409130128257158920
+    {"status": "10001", "destination": "01000000000", "sent_time": "2014-09-12t16:28:25z"}
+

@@ -21,5 +21,5 @@ Examples
 * java (Android)
 * C (libcurl)
 * C++ (Qt5)
-* C# (Mono/Xamarin)
+* C# (Mono/.NET)
 * callback-api : Simple webserver to test Callback API

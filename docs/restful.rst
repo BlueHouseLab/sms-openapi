@@ -57,6 +57,7 @@ Status Code    Description
 204            No Content, 성공 (Response Data 가 없는 경우)
 400            Bad Request, 입력 데이타 잘못된 경우
 401            Unauthorized, API Key 인증 실패
+402            Payment Required, Credit 또는 Point 부족, Credit 충전 필요
 403            Forbidden, 접근 불가, HTTPS를 통한 연결이 아니거나 인증 실패
 404            Not found, delivery id 등의 resource가 존재하지 않는 경우
 406            Not Acceptable, JSON 파싱 실패 등

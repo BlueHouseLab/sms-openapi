@@ -27,20 +27,20 @@ public final class SendSMS {
         String hostname = "api.bluehouselab.com";
         String url = "https://"+hostname+"/smscenter/v1.0/sendsms";
 
-		CredentialsProvider credsProvider = new BasicCredentialsProvider();
-		credsProvider.setCredentials(
-			new AuthScope(hostname, 443, AuthScope.ANY_REALM),
-			new UsernamePasswordCredentials(Config.appid, Config.apikey)
-		);
+        CredentialsProvider credsProvider = new BasicCredentialsProvider();
+        credsProvider.setCredentials(
+            new AuthScope(hostname, 443, AuthScope.ANY_REALM),
+            new UsernamePasswordCredentials(Config.appid, Config.apikey)
+        );
 
-		// Create AuthCache instance
-		AuthCache authCache = new BasicAuthCache();
-		authCache.put(new HttpHost(hostname, 443, "https"), new BasicScheme());
+        // Create AuthCache instance
+        AuthCache authCache = new BasicAuthCache();
+        authCache.put(new HttpHost(hostname, 443, "https"), new BasicScheme());
 
-		// Add AuthCache to the execution context
-		HttpClientContext context = HttpClientContext.create();
-		context.setCredentialsProvider(credsProvider);
-		context.setAuthCache(authCache);
+        // Add AuthCache to the execution context
+        HttpClientContext context = HttpClientContext.create();
+        context.setCredentialsProvider(credsProvider);
+        context.setAuthCache(authCache);
 
         DefaultHttpClient client = new DefaultHttpClient();
 
